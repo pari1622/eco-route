@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EcoRoute - Smart Waste Collection</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div style="margin: 10px">
+      <label for="statusFilter">Filter Bins:</label>
+      <select id="statusFilter">
+        <option value="All">All</option>
+        <option value="Full">Full</option>
+        <option value="Medium">Medium</option>
+        <option value="Empty">Empty</option>
+      </select>
+      <button id="refreshBtn">Refresh Bins</button>
+
+      <!-- ✅ NEW: Show My Location button -->
+      <button
+        onclick="showMyLocation()"
+        style="margin-left: 10px; padding: 6px 12px"
+      >
+        📍 Show My Location
+      </button>
+    </div>
+
+    <h1>EcoRoute - Smart Waste Collection</h1>
+
+    <div id="dashboard">
+      <h2>EcoRoute Dashboard</h2>
+      <p id="summary"></p>
+    </div>
+
+    <div id="map" style="height: 500px"></div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+
+    <!-- Google Maps API script with your API key -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC85zUUJyCNiWQSC5jFXAK5L3yM0znJSYQ&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>
